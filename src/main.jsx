@@ -4,9 +4,10 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './components/Home/Home.jsx'
-import ABout from './components/About/ABout.jsx'
+import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Privacypolicies from './components/Privacypolicies/Privacypolicies.jsx'
+import user from './components/User/user.jsx'
 
 const router=createBrowserRouter([{
   path:'/',
@@ -18,7 +19,7 @@ const router=createBrowserRouter([{
     },
     {
       path:'about',
-      element:<ABout/>
+      element:<About/>
     },{
       path:'contact',
       element:<Contact/>
@@ -26,6 +27,9 @@ const router=createBrowserRouter([{
     {
       path:'privacy-policies',
       element:<Privacypolicies />
+    },{
+      path:'use/:userid',
+      element:<user />
     }
   ]
 }])
