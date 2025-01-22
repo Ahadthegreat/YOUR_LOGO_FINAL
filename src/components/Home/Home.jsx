@@ -38,7 +38,7 @@ function Home() {
             <div className="grid place-items-center sm:mt-20">
                 <img className="w-[400px]" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
             </div>
-
+            
             <h1 className="text-center text-2xl sm:text-5xl pt-10 pb-2 font-medium">Lorem Ipsum Yojo</h1>
         </div>
     );

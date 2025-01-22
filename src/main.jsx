@@ -7,14 +7,20 @@ import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Privacypolicies from './components/Privacypolicies/Privacypolicies.jsx'
-import user from './components/User/user.jsx'
+import User from './components/User/user.jsx'
+import GetStarted from './components/GetStarted/GetStarted.jsx'
+import Login from './components/Login/login.jsx'
 
 const router=createBrowserRouter([{
   path:'/',
   element: <Layout />,
   children:[
     {
-      path:'home',
+      path:'/',
+      element:<Home/>
+    },
+    {
+      path:'/home',
       element:<Home/>
     },
     {
@@ -28,13 +34,21 @@ const router=createBrowserRouter([{
       path:'privacy-policies',
       element:<Privacypolicies />
     },{
-      path:'use/:userid',
-      element:<user />
-    }
+      path:'user/:userid',
+      element:<User />
+    },
+    {
+      path:'/getstarted',
+      element:<GetStarted />
+    },
+    {
+      path:'/login',
+      element:<Login />
+    },
   ]
 }])
 
-// const routr=createBrowserRouter([{
+// const router=createBrowserRouter([{
 //   path:'//',
 //   element:<Home/>,
 //   children:[
@@ -43,7 +57,7 @@ const router=createBrowserRouter([{
 // }])
  
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+   </StrictMode>
 )
