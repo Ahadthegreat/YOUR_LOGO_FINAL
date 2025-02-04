@@ -35,8 +35,4 @@ function About() {
   )
 }
 
-<<<<<<< HEAD
 export default About
-=======
-export default About
->>>>>>> 5605fd5af351a2b569b3efa6c251052ce8c10ed2
