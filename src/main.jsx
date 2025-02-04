@@ -10,6 +10,14 @@ import Privacypolicies from './components/Privacypolicies/Privacypolicies.jsx'
 import User from './components/User/user.jsx'
 import GetStarted from './components/GetStarted/GetStarted.jsx'
 import Login from './components/Login/login.jsx'
+import { ClerkProvider } from '@clerk/clerk-react'
+
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
 
 const router=createBrowserRouter([{
   path:'/',
@@ -58,6 +66,8 @@ const router=createBrowserRouter([{
  
 createRoot(document.getElementById('root')).render(
    <StrictMode>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/" afterSignInUrl="/getstarted">
     <RouterProvider router={router} />
+    </ClerkProvider>
    </StrictMode>
 )
