@@ -4,11 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './components/Home/Home.jsx'
-<<<<<<< HEAD
 import About from './components/About/About.jsx'
-=======
-import ABout from './components/About/About.jsx'
->>>>>>> 5605fd5af351a2b569b3efa6c251052ce8c10ed2
 import Contact from './components/Contact/Contact.jsx'
 import Privacypolicies from './components/Privacypolicies/Privacypolicies.jsx'
 import User from './components/User/user.jsx'
@@ -60,14 +56,6 @@ const router=createBrowserRouter([{
   ]
 }])
 
-// const router=createBrowserRouter([{
-//   path:'//',
-//   element:<Home/>,
-//   children:[
-//     {},{}
-//   ]
-// }])
- 
 createRoot(document.getElementById('root')).render(
    <StrictMode>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/" afterSignInUrl="/getstarted">

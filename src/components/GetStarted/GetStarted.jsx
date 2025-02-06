@@ -29,21 +29,11 @@ function GetStarted() {
     const handleSendClick = async () => {
         setMessage(inputText);
         setInputText('')
-        const response1=await axios.post('http://localhost:3000/generate-image',{
-            text:message,
-            width:300,
-            height:200,
-            steps:1
-        })
-        const response2=await axios.post('http://localhost:3000/generate-image',{
-            text:message,
-            width:300,
-            height:200,
-            steps:1
+        const response1=await axios.post('http://localhost:3000/generate',{
+            prompt:message,
         })
         setLoad(false)
         setUrl(response1.data.generated_image)
-        setUrl1(response2.data.generated_image)
         setInputText('');
     };
     return (
@@ -51,8 +41,8 @@ function GetStarted() {
             <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
                 <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12 border-red-700 bottom-0">
                 {!load && <div className='flex mx-auto w-fit px-[10px]'>
-                    <img src={url} alt="LOADING" /> 
-                    <img src={url1} alt="LOADING" /> 
+                    <img src={`data:image/jpeg;charset=utf-8;base64,${url}`} className='h-[100px] w-[100px]' alt="LOADING" /> 
+                    {/* <img src={url1} alt="LOADING" />  */}
                 </div>  } 
                 {load && <div className='mx-auto w-fit'>Loading</div>}
 
