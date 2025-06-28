@@ -1,8 +1,9 @@
 import React from 'react';
-import { SignedIn, SignedOut, SignInButton, UserButton, useAuth } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignInButton, UserButton, useAuth, useUser } from "@clerk/clerk-react";
 
 function Login() {
-  const { isLoaded, isSignedIn, userId, sessionId } = useAuth();
+  const { isLoaded, isSignedIn, sessionId } = useAuth();
+  const {user} =useUser();
 
   if (!isLoaded) {
     return <div>Loading...</div>;
@@ -12,7 +13,7 @@ function Login() {
     <div className="w-full h-screen bg-gradient-to-r from-slate-100 to-pink-300 animate-color-cycle flex items-center justify-center">
       <div className="w-[450px] bg-white p-8 rounded-xl shadow-lg text-center">
         <h2 className="text-xl font-bold text-gray-800 mb-6">
-          {isSignedIn ? `Hello, ${userId}!` : 'Please sign in to continue'}
+          {isSignedIn ? `Hello, ${user.fullName}!` : 'Please sign in to continue'}
         </h2>
 
         {isSignedIn ? (
