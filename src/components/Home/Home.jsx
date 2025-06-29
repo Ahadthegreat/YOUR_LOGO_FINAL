@@ -8,7 +8,9 @@ function Home() {
         
         <div className="mx-auto top-0 max-w-7xl">
             
-            <h1 className="text-center text-2xl sm:text-5xl pt-10 pb-5 font-medium">Welcome स्वागतम السَّلَامُ عَلَيْكُمْ </h1>
+            {/* <h1 className="text-center text-2xl sm:text-5xl pt-10 pb-5 font-medium">Welcome स्वागतम السَّلَامُ عَلَيْكُمْ </h1> */}
+            
+            <h1 className="text-center text-2xl sm:text-5xl pt-10 pb-5 font-medium">Welcome Tabassum Siddiqui</h1>
             <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:pt-16">
                 <div className="relative z-10 max-w-screen-xl px-4 pb-20 pt-10 sm:pt-24 mx-auto sm:px-6 lg:px-8">
                     <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
