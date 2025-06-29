@@ -9,7 +9,7 @@ import Contact from './components/Contact/Contact.jsx'
 import Privacypolicies from './components/Privacypolicies/Privacypolicies.jsx'
 import User from './components/User/user.jsx'
 import GetStarted from './components/GetStarted/GetStarted.jsx'
-import Login from './components/Login/login.jsx'
+import Login from './components/Login/Login.jsx'
 import { ClerkProvider } from '@clerk/clerk-react'
 
 
